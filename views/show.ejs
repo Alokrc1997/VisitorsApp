@@ -1,0 +1,56 @@
+<%- include('partials/header') %> 
+<style>
+  body{
+    background-color: rgb(166, 241, 210);
+  }
+</style>
+
+<%- include('partials/navbar') %> 
+   <h2 class="display-4 text-capitalize mt-2" style="text-align: center;"><%= status %>  Appointments</h2>
+
+
+    <% for(let item of a) {%> 
+      <%if(item.status==status){ %> 
+    <div class="card mb-1 container" style="background-color: rgb(233, 192, 231);" >
+        <div class="d-flex justify-content-between row ">
+            
+            <div class="col-md-12">
+              
+                <div class="card-body " >
+                  <div class="d-flex justify-content-between row g-0">
+                    <h3 class="card-title col-md-4">Name: <%= item.name %> </h3>
+                    <h5 class="col-md-4"><b>Mobile No.:</b> <%= item.mobile %> </h5>
+                    <h5 class="card-text col-md-4"><b>Email:</b> <%= item.email %> </h5>
+                  </div>
+                 
+                  <p class="card-text"><b>Purpose of Visit:</b> <%= item.purpose %> </p>
+                  <div class="d-flex justify-content-between row g-0">
+                    <p class="card-text col-md-6"><small class="text-muted"><b>Entry time:</b> <%= item.entry %> </small></p>
+                    <%if(status==='completed'){ %> 
+                    <p class="card-text col-md-6"><small class="text-muted"><b>Exit time:</b> <%= item.exit %> </small></p>
+                    <%} %> 
+
+                  </div>
+                  <%if(status!=='completed'){ %>
+                    <div  class="col-md-2 ">
+                        <a href="/checkout/<%=item._id%>" class="btn btn-success mt-2">Checkout</a>
+                      </div>
+                      <%}} %> 
+                 
+                </div>
+
+            </div>
+           
+      </div>
+      </div>
+<% } %> 
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer') %> 

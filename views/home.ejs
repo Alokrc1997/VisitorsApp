@@ -1,0 +1,19 @@
+<%- include('partials/header') %> 
+<link rel="stylesheet" href="css/home.css">
+<%- include('partials/navbar') %> 
+<div class="home">
+<div style="text-align: center;">
+   <% if(currentUser){ %> 
+        <h2 class="display-5">Welcome to <%= currentUser.company %> </h2>
+        <%}else{ %> 
+   <a class="btn btn-primary" href="/login">Login Admin</a>
+   
+   <p><a style="color: rgb(37, 34, 31);"  href="/register">Not Registered yet? Register here...</a></p>
+   <%} %> 
+</div>
+</div>
+
+    
+
+
+    <%- include('partials/footer') %> 

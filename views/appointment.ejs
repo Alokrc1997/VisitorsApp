@@ -1,0 +1,29 @@
+<%- include('partials/header') %> 
+<%- include('partials/navbar') %> 
+  <h1 class="display-4 m-3" style="text-align: center;">Book an Appointment</h1>
+    <form action="/appointment" method="POST" class="container m-5">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" required name="name" placeholder="name">
+      </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" required name="email" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mobile</label>
+        <input type="tel" class="form-control" id="exampleFormControlInput1" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" name="mobile" placeholder="Mobile">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Purpose</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" required name="purpose" rows="3"></textarea>
+      </div>
+
+      <div>
+          <button class="btn btn-success">Submit</button>
+      </div>
+    </form>
+
+    <%- include('partials/footer') %> 
+

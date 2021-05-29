@@ -1,0 +1,92 @@
+<%- include('partials/header') %> 
+
+<%- include('partials/navbar')  %> 
+
+<div class="container " style="max-width: 70%; margin-top: 3rem;">
+
+    <form action="/register" method="POST" class="needs-validation" novalidate>
+
+        
+
+        <h3 class="display-5 mb-5">Register Here</h3>
+
+    <div class="row mb-3">
+        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">E-mail</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control form-control-lg" id="email" placeholder="email" required name="email">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Enter Valid Data
+          </div>
+
+        </div>
+    </div>
+
+        <div class="row mb-3">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">User Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="colFormLabel" placeholder="User name" required name="username">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Enter Valid Data
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row mb-3">
+            <label for="colFormLabel5" class="col-sm-2 col-form-label">Company Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="colFormLabel5" placeholder="Company name" required name="company">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Enter Valid Data
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row mb-3">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Mobile No.</label>
+            <div class="col-sm-10">
+              <input type="number"  class="form-control" id="colFormLabel3" placeholder="Mobile No." required name="phone">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Enter Valid Number
+              </div>
+            </div>
+          </div>
+
+
+    
+      <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="colFormLabel2" placeholder="Password" required name="password">          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Enter Valid Data
+          </div>
+        </div>
+      </div>
+
+      
+      
+
+    
+      <button type="Register" class="btn btn-success">Register</button>
+    </form>
+   </div>
+
+
+
+<%- include("partials/footer") %> 

@@ -1,0 +1,15 @@
+ body{
+    background: linear-gradient(to bottom right, blue, pink);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    
+  }
+  .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+  }
